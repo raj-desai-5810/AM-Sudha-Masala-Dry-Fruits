@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #834615;
+    --secondery-color: #c77d40;
+    --muted: #6c6c6c;
+    --bg-color: #fff8ef;
+    --primary-font: "Poppins", sans-serif;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--primary-font) !important;
+}
+
+body {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+.form-control,
+.form-select {
+    cursor: pointer;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.27rem #83461540 !important;
+}
+
+.form-select:focus {
+    border-color: #834615df !important;
+    box-shadow: 0 0 0 0.27rem #83461540 !important;
+}
+
+.tx-primary {
+    color: var(--primary-color);
+}
+
+/* PRIMARY BTN */
+.pri-btn {
+    text-decoration: none;
+    background-image: linear-gradient(to right, #BA8B02 0%, var(--primary-color) 51%, var(--secondery-color) 100%)
+}
+
+.pri-btn {
+    padding: 12px 35px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.pri-btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* ================================ Navbar ================================== */
+
+
+/* ---------------------- Desktop Default ---------------------- */
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+/* ---------------------- Hamburger ---------------------- */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+@media (max-width: 992px) {
+
+    .am-nav {
+        padding: .4rem .7rem !important;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .links {
+        position: absolute;
+        top: 87px;
+        right: 10px;
+        background: #fff;
+        flex-direction: column;
+        width: 200px;
+        padding: 15px;
+        border-radius: 14px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+        align-items: start;
+        opacity: 0;
+        transform: translateY(-15px);
+        pointer-events: none;
+        transition: all 0.35s ease;
+    }
+
+    .links.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+.am-nav {
+    position: relative;
+    width: 100%;
+    padding: .4rem 1.5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px #dededead;
+}
+
+.brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand-wrap img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #e09f3e;
+}
+
+.brand-stamp {
+    position: relative;
+    padding: 5px 18px;
+    border: 2px dashed #9c2f2f;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.brand-title {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #9c2f2f;
+}
+
+.brand-tag {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #7a4a2e;
+}
+
+.brand-stamp::after {
+    content: "EST. INDIA";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #9c2f2f;
+    color: #fff;
+    font-size: 9px;
+    padding: 4px 6px;
+    transform: rotate(12deg);
+}
+
+/* .links.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+} */
+
+.am-link {
+    text-decoration: none;
+    height: max-content;
+    color: #000;
+    padding: .45rem .55rem;
+    border-radius: 40px;
+    transition: .4s ease-in-out;
+}
+
+.am-link:hover {
+    color: #fff;
+    background: var(--primary-color);
+}
