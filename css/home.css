@@ -1,0 +1,135 @@
+.hero-wrap {
+    padding: 5rem 0;
+    background: linear-gradient(120deg, #fff3e4, #fde5c8);
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.hero-badge {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+}
+
+.hero-wrap h1 span {
+    color: var(--primary-color);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ghost-btn {
+    padding: 12px 28px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hero-stats span {
+    display: block;
+    font-size: .8rem;
+    color: #666;
+}
+
+@media (max-width: 991px) {
+    .hero-img {
+        margin-top: 1.5rem;
+    }
+}
+
+.cat-card {
+    height: 5.5rem !important;
+    border-radius: 12px;
+    padding: 8px 12px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(246, 184, 47, 0.06);
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: .3s ease-in-out;
+}
+
+.cat-card:hover {
+    box-shadow: rgba(99, 99, 99, 0.15) 0px 12px 8px 0px;
+    scale: 1.02;
+    transform: translateY(-5px);
+}
+
+.cat-img {
+    height: 100%;
+}
+
+
+
+
+/* item cards */
+
+.popular-items:hover .item-card {
+    filter: brightness(100%);
+}
+
+.item-card {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.item-card .pri-btn {
+    padding: 12px 20px;
+}
+
+.item-card .btn-outline-dark {
+    padding: 10px 14px;
+}
+
+.popular-items .item-card:hover {
+    box-shadow: rgba(99, 99, 99, 0.15) 0px 12px 8px 0px;
+    scale: 1.02;
+    transform: translateY(-5px);
+    z-index: 2;
+}
+
+.popular-items img {
+    transition: .3s ease-in-out;
+}
+
+.popular-items img:hover {
+    filter: brightness(105%);
+    box-shadow: rgba(99, 99, 99, 0.15) 0px 12px 8px 0px;
+    scale: 1.02;
+    transform: translateY(-5px);
+    z-index: 2;
+}
+
+.item-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+    background: #f6f6f6;
+}
+
+.item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
