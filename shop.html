@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop | AM Shuddh Masala & Dry Fruits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="img/logo.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+  <!-- GLOBAL & HOME CSS -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- SHOP CSS -->
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="am-nav">
+  <div class="brand-wrap">
+    <img src="img/logo.png">
+    <div class="brand-stamp">
+      <div class="brand-title">AM Shuddh</div>
+      <div class="brand-tag">MASALA & DRY FRUITS</div>
+    </div>
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="links" id="navLinks">
+    <a href="index.html" class="am-link"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="shop.html" class="am-link"><i class="fa-solid fa-shop"></i> Shop</a>
+    <a href="about.html" class="am-link"><i class="fa-solid fa-address-card"></i> About</a>
+    <a href="contact.html" class="am-link"><i class="fa-solid fa-phone-volume"></i> Contact</a>
+    <a href="login.html" class="pri-btn ms-2"><i class="fa-solid fa-user"></i> Login</a>
+  </div>
+</nav>
+
+<!-- ================= SHOP LAYOUT ================= -->
+<section class="shop-page">
+
+    <!-- FILTER -->
+    <aside class="shop-filter">
+    <h5 class="mb-3">Filters</h5>
+
+    <div class="mb-4">
+        <strong>Category</strong>
+        <label><input type="checkbox"> Masala</label>
+        <label><input type="checkbox"> Dry Fruits</label>
+        <label><input type="checkbox"> Battle-Nuts</label>
+    </div>
+
+    <div class="mb-4">
+        <strong>Price</strong>
+        <label><input type="radio" name="price"> Under ₹500</label>
+        <label><input type="radio" name="price"> ₹500 - ₹1000</label>
+        <label><input type="radio" name="price"> Above ₹1000</label>
+    </div>
+
+    <div>
+        <strong>Sort By</strong>
+        <select class="form-select mt-2">
+        <option>Popularity</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        </select>
+
+        <button type="button" class="pri-btn mt-3">Apply Filter</button>
+    </div>
+    </aside>
+
+    <!-- MOBILE FILTER BUTTON -->
+    <div class="mobile-filter-btn d-md-none px-3 mb-3">
+    <button
+        class="btn pri-btn w-100"
+        data-bs-toggle="modal"
+        data-bs-target="#filterModal"
+    >
+        <i class="fa-solid fa-filter"></i> Filter
+    </button>
+    </div>
+
+    <!-- FILTER MODAL (MOBILE) -->
+    <div class="modal fade" data-bs-backdrop="static" id="filterModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+
+        <div class="modal-header">
+            <h5 class="modal-title">Filters</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+            <!-- CATEGORY -->
+            <div class="filter-block">
+                <h6 class="filter-title">Category</h6>
+
+                <label class="filter-option">
+                <input type="checkbox"> Masala
+                </label>
+
+                <label class="filter-option">
+                <input type="checkbox"> Dry Fruits
+                </label>
+
+                <label class="filter-option">
+                <input type="checkbox"> Battle-Nuts
+                </label>
+            </div>
+
+            <!-- PRICE -->
+            <div class="filter-block">
+                <h6 class="filter-title">Price</h6>
+
+                <label class="filter-option">
+                <input type="radio" name="price"> Under ₹500
+                </label>
+
+                <label class="filter-option">
+                <input type="radio" name="price"> ₹500 – ₹1000
+                </label>
+
+                <label class="filter-option">
+                <input type="radio" name="price"> Above ₹1000
+                </label>
+            </div>
+
+            <!-- SORT -->
+            <div class="filter-block">
+                <h6 class="filter-title">Sort By</h6>
+                <select class="form-select">
+                <option>Popularity</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn pri-btn w-100" data-bs-dismiss="modal">
+            Apply Filters
+            </button>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <main class="shop-products">
+    <div class="row g-3 popular-items">
+
+        <!-- CARD (FROM home.html) -->
+        <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="card item-card">
+            <div class="item-img-wrapper">
+            <img src="img/items/haldi.png" class="item-img">
+            </div>
+            <div class="p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                <h6 class="mb-1">Haldi - 1 KG</h6>
+                <small class="text-muted">Masala</small>
+                </div>
+                <strong>₹550</strong>
+            </div>
+            <div class="mt-3 d-flex justify-content-between item-btn-cont">
+                <a class="pri-btn" href="#"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                <button class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="card item-card">
+            <div class="item-img-wrapper">
+            <img src="img/items/kaju.png" class="item-img">
+            </div>
+            <div class="p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                <h6 class="mb-1">Kaju - 1 KG</h6>
+                <small class="text-muted">Dry Fruits</small>
+                </div>
+                <strong>₹1200</strong>
+            </div>
+            <div class="mt-3 d-flex justify-content-between item-btn-cont">
+                <a class="pri-btn" href="#"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                <button class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="card item-card">
+            <div class="item-img-wrapper">
+            <img src="img/items/kaju.png" class="item-img">
+            </div>
+            <div class="p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                <h6 class="mb-1">Kaju - 1 KG</h6>
+                <small class="text-muted">Dry Fruits</small>
+                </div>
+                <strong>₹1200</strong>
+            </div>
+            <div class="mt-3 d-flex justify-content-between item-btn-cont">
+                <a class="pri-btn" href="#"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                <button class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="card item-card">
+            <div class="item-img-wrapper">
+            <img src="img/items/kaju.png" class="item-img">
+            </div>
+            <div class="p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                <h6 class="mb-1">Kaju - 1 KG</h6>
+                <small class="text-muted">Dry Fruits</small>
+                </div>
+                <strong>₹1200</strong>
+            </div>
+            <div class="mt-3 d-flex justify-content-between item-btn-cont">
+                <a class="pri-btn" href="#"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                <button class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="card item-card">
+            <div class="item-img-wrapper">
+            <img src="img/items/kaju.png" class="item-img">
+            </div>
+            <div class="p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                <h6 class="mb-1">Kaju - 1 KG</h6>
+                <small class="text-muted">Dry Fruits</small>
+                </div>
+                <strong>₹1200</strong>
+            </div>
+            <div class="mt-3 d-flex justify-content-between item-btn-cont">
+                <a class="pri-btn" href="#"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                <button class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="card item-card">
+            <div class="item-img-wrapper">
+            <img src="img/items/kaju.png" class="item-img">
+            </div>
+            <div class="p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                <h6 class="mb-1">Kaju - 1 KG</h6>
+                <small class="text-muted">Dry Fruits</small>
+                </div>
+                <strong>₹1200</strong>
+            </div>
+            <div class="mt-3 d-flex justify-content-between item-btn-cont">
+                <a class="pri-btn" href="#"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                <button class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="card item-card">
+            <div class="item-img-wrapper">
+            <img src="img/items/kaju.png" class="item-img">
+            </div>
+            <div class="p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                <h6 class="mb-1">Kaju - 1 KG</h6>
+                <small class="text-muted">Dry Fruits</small>
+                </div>
+                <strong>₹1200</strong>
+            </div>
+            <div class="mt-3 d-flex justify-content-between item-btn-cont">
+                <a class="pri-btn" href="#"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                <button class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up">
+        <div class="card item-card">
+            <div class="item-img-wrapper">
+            <img src="img/items/kaju.png" class="item-img">
+            </div>
+            <div class="p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                <h6 class="mb-1">Kaju - 1 KG</h6>
+                <small class="text-muted">Dry Fruits</small>
+                </div>
+                <strong>₹1200</strong>
+            </div>
+            <div class="mt-3 d-flex justify-content-between item-btn-cont">
+                <a class="pri-btn" href="#"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
+                <button class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </main>
+
+</section>
+
+<!-- ========================== Footer =================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- About -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="footer-title">AM Shuddh Masala & Dry Fruits</h5>
+        <p class="footer-text">
+          Pure, fresh, and premium-quality spices and dry fruits.
+          Homely taste with trust in every pack.
+        </p>
+
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-title">Other</h5>
+        <ul class="footer-links">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+          <li><a href="admin/dash.html">Admin</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-title">Contact Us</h5>
+        <ul class="footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i> India</li>
+          <li><i class="fas fa-phone"></i> +91 9XXXXXXXXX</li>
+          <li><i class="fas fa-envelope"></i> support@amshuddh.com</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <div class="container text-center">
+      © 2025 <strong>AM Shuddh Masala & Dry Fruits</strong>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({ duration: 900, once: false });
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+hamburger.addEventListener("click", () => navLinks.classList.toggle("show"));
+</script>
+
+</body>
+</html>
