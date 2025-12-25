@@ -1,0 +1,157 @@
+.shop-page {
+    display: flex;
+    height: calc(100vh - 90px);
+}
+
+/* FILTER */
+.shop-filter {
+    width: 280px;
+    padding: 20px;
+    background: #fff;
+    border-right: 1px solid #eee;
+
+    position: sticky;
+    top: 90px;
+
+    height: calc(100vh - 90px);
+}
+
+.shop-filter .pri-btn {
+    width: 95%;
+    margin: 0 2.5%;
+    position: absolute;
+    bottom: .5rem;
+    left: 0;
+}
+
+/* filter inputs */
+.shop-filter label {
+    display: block;
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+/* PRODUCTS */
+.shop-products {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.shop-products .pri-btn {
+    width: 100%;
+    margin-right: .43rem;
+    font-size: .9rem;
+    padding: 12px 8px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .shop-page {
+        flex-direction: column;
+    }
+
+    .item-card {
+        font-size: .9rem;
+    }
+
+    .item-card h6,
+    .item-card strong {
+        font-size: .85rem;
+    }
+
+    .item-card .p-3 {
+        padding: 1rem .7rem !important;
+    }
+
+    .shop-products {
+        height: calc(100vh - 90px);
+    }
+
+    .item-btn-cont .pri-btn {
+        font-size: 0 !important;
+    }
+
+    .item-btn-cont i {
+        font-size: 1.1rem !important;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .shop-page {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .shop-filter {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .shop-products {
+        height: auto;
+        overflow-y: visible;
+        padding: 20px 10px;
+    }
+}
+
+/* MOBILE FILTER BUTTON */
+.mobile-filter-btn {
+    margin-top: 1rem;
+    top: 90px;
+    z-index: 100;
+    background: var(--bg-color);
+    padding-top: 10px;
+}
+
+/* HIDE SIDEBAR FILTER ON MOBILE */
+@media (max-width: 767px) {
+    .shop-filter {
+        display: none;
+    }
+}
+
+
+
+
+
+/* FILTER MODAL BODY */
+.filter-modal-body {
+    padding: 10px 4px;
+}
+
+/* EACH FILTER SECTION */
+.filter-block {
+    margin-bottom: 22px;
+}
+
+/* SECTION TITLE */
+.filter-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* OPTION ROW */
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* INPUT SIZE & ALIGN */
+.filter-option input {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
